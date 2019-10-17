@@ -3,7 +3,7 @@ title: The DotA Scientist
 description: >
   DotA 2 and data science.
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/thedotascientist/" # the subpath of your site, e.g. /blog/
 url: "http://dawsoneliasen.github.io/thedotascientist" # the base hostname & protocol for your site
 
 author:
