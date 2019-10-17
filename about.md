@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+subtitle: A blog about data science and DotA 2
 permalink: /about/
 ---
 
