@@ -1,8 +1,8 @@
-- slug: design
-  name: Design
+- slug: machine-learning
+  name: Machine learning
 
-- slug: tools
-  name: Tools
+- slug: statistics
+  name: Statistics
 
-- slug: productivity
-  name: Productivity
+- slug: visualization
+  name: Visualization
