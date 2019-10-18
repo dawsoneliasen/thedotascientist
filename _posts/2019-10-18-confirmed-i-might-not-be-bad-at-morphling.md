@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Statistically, I am Not Necessarily Bad at Morphling"
+title:  "Confirmed: I Might Not be Bad at Morphling"
 subtitle: "Evaluating the uncertainty in win rates"
 date:   2019-10-18 23:59:59
 categories: [statistics]
@@ -40,7 +40,22 @@ Here, $z$ or the 'z-score' is a value that describes how unlikely an observation
 $$ 0.4328 \pm 1.96 \sqrt{\frac{0.4328 (1 - 0.4328)} {67} } $$
 {% endraw %}
 
-This comes out to the interval (0.3142, 0.5515). 
+This comes out to the interval (0.3142, 0.5515). We can say that we are 95% confident that my "true" win rate with Morphling is somewhere in between 31.42% and 55.15%. If this is underwhelming to you... welcome to statistics.
 
-This method for calculating the confidence interval for a binomial random variable depends on the assumption that the error of $\hat p$ is normally distributed.
+Let's try this again for my win rate on Faceless Void. I have 239 matches on Faceless Void with a 57.32% win rate.
+
+{% raw %}
+$$ 0.5732 \pm 1.96 \sqrt{\frac{0.5732 (1 - 0.5732)} {239} } $$
+{% endraw %}
+
+We get the interval (0.5105, 0.6359). This interval is much narrower because I have more than three times as many games on Faceless Void than Morphling. We can say with some confidence that I'm actually pretty good at Faceless Void (or at least, I win more often that not).
+
+This method for calculating the confidence interval for a binomial random variable depends on the assumption that the error of $\hat p$ is normally distributed. This assumption depends on the central limit theorem, which means that it is less reliable the smaller the $n$ is. You can read more about confidence intervals for binomial random variables [here](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval).
+
+## What does it all mean?
+The important thing to me is that it's *possible* that I'm not a garbage Morphling player. But I think the real takeaway from this exercise is that the estimates that you see on DotaBuff or in the client are *not* reliable ways of evaluating your skill with a hero. Faceless Void is my most played hero, and the 95% confidence interval for my win rate is still considerably large. 239 observations is really not that many, and 67 observations just isn't enough to get a good estimate. This problem is exacerbated by the fact that your win rate with a hero certainly changes over time as you get better, balance changes are made, and the meta shifts - so the appropriate sample is a small subset of your entire match history.
+
+It's easy to put a lot of stake into the win rates you see on DotaBuff. I am probably a little too concerned about them. Just remember that these estimates are not significant.
+
+I'd love it if DotaBuff started showing confidence intervals like this, to demonstrate how reliable any estimate might be. Until then, you'll just have to do the math on your own.
 
