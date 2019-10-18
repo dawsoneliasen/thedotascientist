@@ -2,7 +2,7 @@
 layout: post
 title:  "Win Rate Confidence Intervals"
 subtitle: "Evaluating the uncertainty in win rates"
-date:   2015-10-18 23:59:59
+date:   2019-10-18 23:59:59
 categories: [statistics]
 ---
 
