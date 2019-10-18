@@ -37,6 +37,6 @@ $$ \hat p \pm z \sqrt{\frac{\hat p (1 - \hat p)} {n} } $$
 Here, $z$ or the 'z-score' is a value that describes how unlikely an observation is from a *standard normal distribution*. For $\alpha = 0.05$, $z = 1.96$. Now we have everything we need to make a confidence interval for one of our win rates. Let's use my win rate on Morphling, which is 43.28% out of 67 games. 
 
 {% raw %}
-$$ .4328 \pm 1.96 \sqrt{\frac{.4328 (1 - 4.328)} {67} } $$
+$$ .4328 \pm 1.96 \sqrt{\frac{.4328 (1 - .4328)} {67} } $$
 {% endraw %}
 
