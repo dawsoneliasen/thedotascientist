@@ -26,5 +26,17 @@ However, in order to use the pmf, we have to know $p$, which is your probability
 So what can we do? We can create a confidence interval.
 
 ## Calculating a confidence interval
+A confidence interval for an estimate provides a range of values in which we can be "confident" the true value is contained. Generally, we calculate a confidence level by deciding on a *confidence level*, and using that to calculate the distance from the estimate which will shape the interval. A standard confidence level is 95% ($\alpha = 0.05$). 
 
+We are modelling the number of wins on a hero as a binomial random variable with a certain number of games, $n$. The probability of an individual win is $p$ - this is called a *parameter* of the random variable. We're going to construct a confidence interval centered on $\hat p$, which is the number of wins you have divided by the number of games you have played. One formula for creating this confidence interval is
+
+{% raw %}
+$$ \hat p \pm z \sqrt{\frac{\hat p (1 - \hat p)} {n} } $$
+{% endraw%}
+
+Here, $z$ or the 'z-score' is a value that describes how unlikely an observation is from a *standard normal distribution*. For $\alpha = 0.05$, $z = 1.96$. Now we have everything we need to make a confidence interval for one of our win rates. Let's use my win rate on Morphling, which is 43.28% out of 67 games. 
+
+{% raw %}
+$$ .4328 \pm 1.96 \sqrt{\frac{.4328 (1 - 4.328)} {67} } $$
+{% endraw %}
 
