@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Win Rate Confidence Intervals"
+title:  "Statistically, I am Not Necessarily Bad at Morphling"
 subtitle: "Evaluating the uncertainty in win rates"
 date:   2019-10-18 23:59:59
 categories: [statistics]
@@ -37,6 +37,10 @@ $$ \hat p \pm z \sqrt{\frac{\hat p (1 - \hat p)} {n} } $$
 Here, $z$ or the 'z-score' is a value that describes how unlikely an observation is from a *standard normal distribution*. For $\alpha = 0.05$, $z = 1.96$. Now we have everything we need to make a confidence interval for one of our win rates. Let's use my win rate on Morphling, which is 43.28% out of 67 games. 
 
 {% raw %}
-$$ .4328 \pm 1.96 \sqrt{\frac{.4328 (1 - .4328)} {67} } $$
+$$ 0.4328 \pm 1.96 \sqrt{\frac{0.4328 (1 - 0.4328)} {67} } $$
 {% endraw %}
+
+This comes out to the interval (0.3142, 0.5515). 
+
+This method for calculating the confidence interval for a binomial random variable depends on the assumption that the error of $\hat p$ is normally distributed.
 
