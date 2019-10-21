@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Confirmed: I Might Not be Bad at Morphling"
+title:  "How to Demonstrate That you Might Not be Bad at Morphling"
 subtitle: "Evaluating the uncertainty in win rates"
 date:   2019-10-18 23:59:59
 categories: [statistics]
 ---
 
-Most players pay attention to win rates (the percentage of total games won), particularly for heroes they play often or heroes with which they are trying to improve. DotaBuff and The DotA client both display your win rates for all the heroes.
+Most players pay attention to win rates, particularly for heroes they play often or heroes with which they are trying to improve. DotaBuff and The DotA client both display your win rates for all the heroes.
 
-But how well does a win rate describe your capacity to win with a hero?
+But how well does a win rate describe your capacity to win with a hero? How many games do you have to play before the win rate is a reliable estimate of your skill with a hero?
 
-I'm sure you already have some skepticism of win rates. With a small sample size, the win rate is an unreliable estimate of your skill with a hero. But how big of a sample size (what quantity of matches) is sufficient to consider the estimate reliable? We need a *range* of reasonable values, based on the data we have. For example, if you have 32 games on Chaos Knight with a 50% win rate, we might say that we are 95% confident that your "true" win rate with Chaos Knight is anywhere between 48-52%. This is called a *95% confidence interval.*
+I'm sure you already have some skepticism of win rates. With a small sample size, the win rate is an unreliable estimate of your skill with a hero. But how big of a sample size (what quantity of matches) is sufficient to consider the estimate reliable? We need a *range* of reasonable values, based on the data we have. For example, if you have a 50% win rate on Chaos Knight out of a certain number of games, we might say that we are 95% confident that your "true" win rate with Chaos Knight is anywhere between 48-52%. This is called a *95% confidence interval.*
 
 ## Formulating the scenario
 Let's assume that every game of DotA that you play has a random outcome with a certain probability of winning, $p$. Certainly, the outcome of a game is not random - it's affected by things such as your team's skill, the other team's skill, the heroes in the game, the items purchased, etc. But since you can't anticipate any of these things before you click 'ACCEPT', I think that this is a reasonable assumption. The outcome of the game, then, is an example of a *Bernoulli trial*. A Bernoulli trial is simply an "experiment" with a random outcome that is either a success or a failure, and a specific probability of success. We're assuming that this probability of success is your "true" win rate with the hero, if you will. The number of wins out of a certain number of games, $n$, then, follows a *binomial distribution*. The binomial distribution can be thought of as the behavior of a series of Bernoulli trials. We can evaluate the probability of a certain number of successes, $k$, for a specific binomial random variable $X$, using the *probability mass function*:
